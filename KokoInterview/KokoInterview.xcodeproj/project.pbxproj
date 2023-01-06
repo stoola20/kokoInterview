@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		370F56342967DF930092E594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56332967DF930092E594 /* AppDelegate.swift */; };
 		370F56362967DF930092E594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56352967DF930092E594 /* SceneDelegate.swift */; };
-		370F56382967DF930092E594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56372967DF930092E594 /* ViewController.swift */; };
+		370F56382967DF930092E594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56372967DF930092E594 /* BaseViewController.swift */; };
 		370F563B2967DF930092E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F56392967DF930092E594 /* Main.storyboard */; };
 		370F563D2967DF940092E594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370F563C2967DF940092E594 /* Assets.xcassets */; };
 		370F56402967DF940092E594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F563E2967DF940092E594 /* LaunchScreen.storyboard */; };
+		370F56482967EF8E0092E594 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56472967EF8E0092E594 /* TabBarController.swift */; };
+		370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56502967FB530092E594 /* UIImage+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		370F56302967DF930092E594 /* KokoInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokoInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370F56332967DF930092E594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370F56352967DF930092E594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		370F56372967DF930092E594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370F56372967DF930092E594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		370F563A2967DF930092E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370F563C2967DF940092E594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370F563F2967DF940092E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370F56412967DF940092E594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370F56472967EF8E0092E594 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		370F56502967FB530092E594 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		370F56322967DF930092E594 /* KokoInterview */ = {
 			isa = PBXGroup;
 			children = (
+				370F564F2967FB290092E594 /* Extension */,
 				370F56332967DF930092E594 /* AppDelegate.swift */,
 				370F56352967DF930092E594 /* SceneDelegate.swift */,
-				370F56372967DF930092E594 /* ViewController.swift */,
 				370F56392967DF930092E594 /* Main.storyboard */,
+				370F564D2967FB100092E594 /* View */,
 				370F563C2967DF940092E594 /* Assets.xcassets */,
 				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
 				370F56412967DF940092E594 /* Info.plist */,
 			);
 			path = KokoInterview;
+			sourceTree = "<group>";
+		};
+		370F564D2967FB100092E594 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				370F56372967DF930092E594 /* BaseViewController.swift */,
+				370F56472967EF8E0092E594 /* TabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		370F564F2967FB290092E594 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				370F56502967FB530092E594 /* UIImage+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370F56382967DF930092E594 /* ViewController.swift in Sources */,
+				370F56482967EF8E0092E594 /* TabBarController.swift in Sources */,
+				370F56382967DF930092E594 /* BaseViewController.swift in Sources */,
+				370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */,
 				370F56342967DF930092E594 /* AppDelegate.swift in Sources */,
 				370F56362967DF930092E594 /* SceneDelegate.swift in Sources */,
 			);
