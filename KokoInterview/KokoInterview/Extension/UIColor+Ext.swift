@@ -16,6 +16,10 @@ extension UIColor {
         return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
     }
 
+    static var veryLightGrey: UIColor {
+        return UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
+    }
+
     static var hotPink: UIColor {
         return UIColor(red: 236/255, green: 0/255, blue: 140/255, alpha: 1)
     }
@@ -34,5 +38,9 @@ extension UIColor {
 
     static var booger: UIColor {
         return UIColor(red: 166/255, green: 204/255, blue: 66/255, alpha: 1)
+    }
+
+    static var buttonBadge: UIColor {
+        return UIColor(red: 249/255, green: 178/255, blue: 220/255, alpha: 1)
     }
 }

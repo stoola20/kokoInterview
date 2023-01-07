@@ -28,6 +28,9 @@
 		370F5674296994830092E594 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F5673296994830092E594 /* UITableView+Ext.swift */; };
 		370F56762969990A0092E594 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56752969990A0092E594 /* UILabel+Ext.swift */; };
 		370F567829699C5B0092E594 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F567729699C5B0092E594 /* UIView+Ext.swift */; };
+		370F567B2969ABBD0092E594 /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56792969ABBD0092E594 /* FriendListCell.swift */; };
+		370F567C2969ABBD0092E594 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370F567A2969ABBD0092E594 /* FriendListCell.xib */; };
+		370F567E2969C0B80092E594 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F567D2969C0B80092E594 /* BadgeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		370F5673296994830092E594 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		370F56752969990A0092E594 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		370F567729699C5B0092E594 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		370F56792969ABBD0092E594 /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		370F567A2969ABBD0092E594 /* FriendListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
+		370F567D2969C0B80092E594 /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		370F564D2967FB100092E594 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				370F567D2969C0B80092E594 /* BadgeButton.swift */,
 				370F566A29698D3F0092E594 /* Cells */,
 				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
 				370F56392967DF930092E594 /* Main.storyboard */,
@@ -156,6 +163,8 @@
 			children = (
 				370F566D29698E860092E594 /* NoFriendsCell.swift */,
 				370F566E29698E860092E594 /* NoFriendsCell.xib */,
+				370F56792969ABBD0092E594 /* FriendListCell.swift */,
+				370F567A2969ABBD0092E594 /* FriendListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -219,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				370F56402967DF940092E594 /* LaunchScreen.storyboard in Resources */,
+				370F567C2969ABBD0092E594 /* FriendListCell.xib in Resources */,
 				370F563D2967DF940092E594 /* Assets.xcassets in Resources */,
 				370F567029698E860092E594 /* NoFriendsCell.xib in Resources */,
 				370F563B2967DF930092E594 /* Main.storyboard in Resources */,
@@ -233,12 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				370F567829699C5B0092E594 /* UIView+Ext.swift in Sources */,
+				370F567B2969ABBD0092E594 /* FriendListCell.swift in Sources */,
 				370F5674296994830092E594 /* UITableView+Ext.swift in Sources */,
 				370F5667296929D30092E594 /* Observable.swift in Sources */,
 				370F56482967EF8E0092E594 /* TabBarController.swift in Sources */,
 				370F566229691F950092E594 /* HTTPClient.swift in Sources */,
 				370F565E2969116D0092E594 /* DataManager.swift in Sources */,
 				370F56382967DF930092E594 /* BaseViewController.swift in Sources */,
+				370F567E2969C0B80092E594 /* BadgeButton.swift in Sources */,
 				370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */,
 				370F566F29698E860092E594 /* NoFriendsCell.swift in Sources */,
 				370F565329690ADE0092E594 /* UIColor+Ext.swift in Sources */,
