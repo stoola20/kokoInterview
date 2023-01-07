@@ -15,10 +15,14 @@ class TabBarController: UITabBarController {
 
         selectedIndex = 1
         navigationItem.leftBarButtonItems = [
-            UIBarButtonItem(image: UIImage.asset(.icNavPinkWithdraw), style: .plain, target: nil, action: nil),
+            UIBarButtonItem(image: UIImage.asset(.icNavPinkWithdraw), style: .plain, target: self, action: #selector(popViewController)),
             UIBarButtonItem(image: UIImage.asset(.icNavPinkTransfer), style: .plain, target: nil, action: nil)
         ]
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.asset(.icNavPinkScan), style: .plain, target: nil, action: nil)
+    }
+
+    @objc private func popViewController() {
+        navigationController?.popViewController(animated: true)
     }
 }

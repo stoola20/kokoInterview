@@ -15,6 +15,14 @@
 		370F56402967DF940092E594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F563E2967DF940092E594 /* LaunchScreen.storyboard */; };
 		370F56482967EF8E0092E594 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56472967EF8E0092E594 /* TabBarController.swift */; };
 		370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56502967FB530092E594 /* UIImage+Ext.swift */; };
+		370F565329690ADE0092E594 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565229690ADE0092E594 /* UIColor+Ext.swift */; };
+		370F565729690BB80092E594 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565629690BB80092E594 /* FriendsViewController.swift */; };
+		370F565929690F280092E594 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565829690F280092E594 /* User.swift */; };
+		370F565B29690FBC0092E594 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565A29690FBC0092E594 /* Friend.swift */; };
+		370F565E2969116D0092E594 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565D2969116D0092E594 /* DataManager.swift */; };
+		370F566229691F950092E594 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F566129691F950092E594 /* HTTPClient.swift */; };
+		370F56652969296C0092E594 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56642969296C0092E594 /* FriendViewModel.swift */; };
+		370F5667296929D30092E594 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F5666296929D30092E594 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		370F56412967DF940092E594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370F56472967EF8E0092E594 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		370F56502967FB530092E594 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		370F565229690ADE0092E594 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		370F565629690BB80092E594 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		370F565829690F280092E594 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		370F565A29690FBC0092E594 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		370F565D2969116D0092E594 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		370F566129691F950092E594 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		370F56642969296C0092E594 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		370F5666296929D30092E594 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +77,12 @@
 			isa = PBXGroup;
 			children = (
 				370F564F2967FB290092E594 /* Extension */,
+				370F565C296910450092E594 /* Model */,
+				370F564D2967FB100092E594 /* View */,
+				370F56632969294C0092E594 /* ViewModel */,
 				370F56332967DF930092E594 /* AppDelegate.swift */,
 				370F56352967DF930092E594 /* SceneDelegate.swift */,
-				370F56392967DF930092E594 /* Main.storyboard */,
-				370F564D2967FB100092E594 /* View */,
 				370F563C2967DF940092E594 /* Assets.xcassets */,
-				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
 				370F56412967DF940092E594 /* Info.plist */,
 			);
 			path = KokoInterview;
@@ -75,8 +91,9 @@
 		370F564D2967FB100092E594 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				370F56372967DF930092E594 /* BaseViewController.swift */,
-				370F56472967EF8E0092E594 /* TabBarController.swift */,
+				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
+				370F56392967DF930092E594 /* Main.storyboard */,
+				370F565429690B9B0092E594 /* Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,8 +102,39 @@
 			isa = PBXGroup;
 			children = (
 				370F56502967FB530092E594 /* UIImage+Ext.swift */,
+				370F565229690ADE0092E594 /* UIColor+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		370F565429690B9B0092E594 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				370F56372967DF930092E594 /* BaseViewController.swift */,
+				370F56472967EF8E0092E594 /* TabBarController.swift */,
+				370F565629690BB80092E594 /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		370F565C296910450092E594 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				370F565829690F280092E594 /* User.swift */,
+				370F565A29690FBC0092E594 /* Friend.swift */,
+				370F565D2969116D0092E594 /* DataManager.swift */,
+				370F566129691F950092E594 /* HTTPClient.swift */,
+				370F5666296929D30092E594 /* Observable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		370F56632969294C0092E594 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				370F56642969296C0092E594 /* FriendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +208,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370F5667296929D30092E594 /* Observable.swift in Sources */,
 				370F56482967EF8E0092E594 /* TabBarController.swift in Sources */,
+				370F566229691F950092E594 /* HTTPClient.swift in Sources */,
+				370F565E2969116D0092E594 /* DataManager.swift in Sources */,
 				370F56382967DF930092E594 /* BaseViewController.swift in Sources */,
 				370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */,
+				370F565329690ADE0092E594 /* UIColor+Ext.swift in Sources */,
+				370F565929690F280092E594 /* User.swift in Sources */,
+				370F565729690BB80092E594 /* FriendsViewController.swift in Sources */,
+				370F56652969296C0092E594 /* FriendViewModel.swift in Sources */,
+				370F565B29690FBC0092E594 /* Friend.swift in Sources */,
 				370F56342967DF930092E594 /* AppDelegate.swift in Sources */,
 				370F56362967DF930092E594 /* SceneDelegate.swift in Sources */,
 			);
