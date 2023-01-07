@@ -19,6 +19,9 @@ enum ImageAsset: String {
     case icFriendsStar
     case imgFriendsEmpty
     case imgFriendsFemaleDefault
+
+    // other
+    case icInfoBackDeepGray
 }
 
 extension UIImage {

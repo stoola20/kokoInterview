@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="453" id="KGk-i7-Jjw" customClass="NoFriendsCell" customModule="KokoInterview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="453"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imgFriendsEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-vs-CcZ">
+                        <rect key="frame" x="37.666666666666657" y="30" width="244.99999999999997" height="172"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="就從加好友開始吧 ：）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-DO-93G">
+                        <rect key="frame" x="71.333333333333329" y="242" width="177.66666666666669" height="20.333333333333314"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="與好友們一起用 KOKO 聊起來！ 還能互相收付款、發紅包喔：）" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qo-wh-vNK">
+                        <rect key="frame" x="37.666666666666657" y="270.33333333333326" width="244.99999999999997" height="40.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrc-ED-0Mw">
+                        <rect key="frame" x="21" y="412.66666666666669" width="278.33333333333331" height="20.333333333333314"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫助好友更快找到你？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bp-02-ciu">
+                                <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 KOKO ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo4-p6-Qs8">
+                                <rect key="frame" x="173.33333333333334" y="0.0" width="105.00000000000003" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9x-YO-f5l">
+                        <rect key="frame" x="64" y="336" width="192" height="40"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaZ-G6-MAx">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="40"/>
+                                <color key="backgroundColor" red="0.37201322260000003" green="1" blue="0.41743096439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="2tp-c4-EMB"/>
+                                    <constraint firstAttribute="height" constant="40" id="VOv-M5-JFh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加好友"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icAddFriendWhite" translatesAutoresizingMaskIntoConstraints="NO" id="E5m-Zy-Pfl">
+                                <rect key="frame" x="160" y="8" width="24" height="24"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OaZ-G6-MAx" secondAttribute="bottom" id="N1h-19-qcn"/>
+                            <constraint firstItem="E5m-Zy-Pfl" firstAttribute="top" secondItem="W9x-YO-f5l" secondAttribute="top" constant="8" id="PhI-Ev-M0H"/>
+                            <constraint firstItem="OaZ-G6-MAx" firstAttribute="top" secondItem="W9x-YO-f5l" secondAttribute="top" id="Qwg-kM-xlV"/>
+                            <constraint firstItem="OaZ-G6-MAx" firstAttribute="leading" secondItem="W9x-YO-f5l" secondAttribute="leading" id="Ttx-Az-pKA"/>
+                            <constraint firstAttribute="trailing" secondItem="E5m-Zy-Pfl" secondAttribute="trailing" constant="8" id="nqf-UY-i7n"/>
+                            <constraint firstAttribute="trailing" secondItem="OaZ-G6-MAx" secondAttribute="trailing" id="rmA-yR-5no"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="W9x-YO-f5l" firstAttribute="top" secondItem="2qo-wh-vNK" secondAttribute="bottom" constant="25" id="3vz-LJ-09T"/>
+                    <constraint firstItem="ipz-DO-93G" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5YL-xo-UqH"/>
+                    <constraint firstItem="yrc-ED-0Mw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6pI-TL-4Z4"/>
+                    <constraint firstItem="2qo-wh-vNK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9H5-BP-4am"/>
+                    <constraint firstItem="Pk5-vs-CcZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="DQB-67-04V"/>
+                    <constraint firstItem="yrc-ED-0Mw" firstAttribute="top" secondItem="W9x-YO-f5l" secondAttribute="bottom" constant="36.670000000000002" id="DTE-Yy-SZf"/>
+                    <constraint firstItem="yrc-ED-0Mw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HiR-Lb-XFs"/>
+                    <constraint firstAttribute="bottom" secondItem="yrc-ED-0Mw" secondAttribute="bottom" constant="20" id="K51-xs-PU0"/>
+                    <constraint firstItem="W9x-YO-f5l" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="auK-Mu-RxW"/>
+                    <constraint firstItem="Pk5-vs-CcZ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hQk-CP-0Qc"/>
+                    <constraint firstItem="2qo-wh-vNK" firstAttribute="top" secondItem="ipz-DO-93G" secondAttribute="bottom" constant="8" id="k7m-Eh-iNA"/>
+                    <constraint firstItem="ipz-DO-93G" firstAttribute="top" secondItem="Pk5-vs-CcZ" secondAttribute="bottom" constant="40" id="z49-gA-LcF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addFriendButton" destination="OaZ-G6-MAx" id="nVG-HJ-t16"/>
+                <outlet property="bottomLabel" destination="6Bp-02-ciu" id="2kB-sx-rYd"/>
+                <outlet property="buttonContainer" destination="W9x-YO-f5l" id="8BU-19-FjN"/>
+                <outlet property="middleLabel" destination="2qo-wh-vNK" id="dyj-Ih-lzL"/>
+                <outlet property="settingLabel" destination="jo4-p6-Qs8" id="dpP-jK-i2z"/>
+                <outlet property="topLabel" destination="ipz-DO-93G" id="vA1-ZV-Boe"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="192.60563380281693"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icAddFriendWhite" width="24" height="24"/>
+        <image name="imgFriendsEmpty" width="245" height="172"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
