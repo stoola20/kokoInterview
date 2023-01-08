@@ -294,6 +294,7 @@
                         <outlet property="textFieldBackground" destination="C6i-YN-3Km" id="htO-gr-MZ8"/>
                         <outlet property="textFieldBackgroundHeightConstraint" destination="X7Y-yM-ahB" id="odX-qi-bs7"/>
                         <outlet property="textFieldContainer" destination="bmG-B8-VWH" id="BGU-3P-5sH"/>
+                        <outlet property="topContainerTopConstraint" destination="2Ex-BS-mBA" id="xyH-AV-Ryv"/>
                         <outlet property="topContainerView" destination="1ST-xE-0ET" id="yjW-Di-Qqi"/>
                         <outlet property="underLine" destination="3ra-Np-IDh" id="QjE-y5-y52"/>
                         <outlet property="underLineCenterConstraint" destination="sIS-hu-EGi" id="a6K-Gr-ZIt"/>

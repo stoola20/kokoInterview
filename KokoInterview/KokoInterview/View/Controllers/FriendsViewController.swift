@@ -13,6 +13,7 @@ class FriendsViewController: UIViewController {
     var friends: [Friend] = []
     var invitations: [Friend] = []
     private var refreshControl = UIRefreshControl()
+    private var dynamicY: CGFloat = 0 // y position to animate textfield
 
     // MARK: - IBOutlet
     @IBOutlet weak var topContainerView: UIView!
@@ -28,6 +29,7 @@ class FriendsViewController: UIViewController {
     @IBOutlet weak var textFieldBackgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldContainer: UIView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var topContainerTopConstraint: NSLayoutConstraint!
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -40,6 +42,11 @@ class FriendsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        dynamicY = -(textFieldContainer.frame.minY + textFieldBackground.frame.minY - topContainerView.frame.minY)
     }
 
     // MARK: - Private method
@@ -228,5 +235,29 @@ extension FriendsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0,
+            options: .curveEaseIn,
+            animations: {
+                self.topContainerTopConstraint.constant = self.dynamicY
+                self.view.layoutIfNeeded()
+            }
+        )
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0,
+            options: .curveEaseIn,
+            animations: {
+                self.topContainerTopConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        )
     }
 }
