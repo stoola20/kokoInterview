@@ -8,6 +8,7 @@
 import Foundation
 
 final class FriendViewModel {
+    // MARK: - Property
     private let dispatchGroup = DispatchGroup()
     private var friendDict: [String: [Friend]] = [:]
     private lazy var dateFormatter = DateFormatter()
@@ -16,7 +17,12 @@ final class FriendViewModel {
         let friends: [Friend] = []
         return Observable(friends)
     }()
+    let invitations = {
+        let invitations: [Friend] = []
+        return Observable(invitations)
+    }()
 
+    // MARK: - Public methods
     func getUser() {
         DataManager.shared.getUser { [weak self] result in
             guard let self = self else { return }
@@ -43,38 +49,16 @@ final class FriendViewModel {
             DataManager.shared.friendRequest = .friendList(paging: paging + 1)
             multipleFriendRequest()
 
-            dispatchGroup.notify(queue: DispatchQueue.main) { [weak self] in
+            dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
                 guard let self = self else { return }
-                self.friends.value = self.filterFriends(from: self.friendDict)
+                self.assembleFriends(from: self.filterFriends(from: self.friendDict))
             }
         default:
             singleFriendRequest()
         }
     }
 
-    private func filterFriends(from dict: [String: [Friend]]) -> [Friend] {
-        var friends: [Friend] = []
-
-        dict.forEach { _, duplicatedFriends in
-            let sortedFriends = duplicatedFriends.sorted { friend1, friend2 in
-
-                dateFormatter.dateFormat = friend1.updateDate.contains("/") ? "YYYY/MM/dd" : "YYYYMMdd"
-                guard let date1 = dateFormatter.date(from: friend1.updateDate) else {
-                    fatalError("fail to convert friend1 string to date")
-                }
-
-                dateFormatter.dateFormat = friend2.updateDate.contains("/") ? "YYYY/MM/dd" : "YYYYMMdd"
-                guard let date2 = dateFormatter.date(from: friend2.updateDate) else {
-                    fatalError("fail to convert friend2 string to date")
-                }
-
-                return date1 > date2
-            }
-            friends.append(sortedFriends.first!)
-        }
-        return friends
-    }
-
+    // MARK: - Private methods
     private func multipleFriendRequest() {
         dispatchGroup.enter()
         DataManager.shared.getFriends { [weak self] result in
@@ -110,15 +94,54 @@ final class FriendViewModel {
             case .success(let data):
                 do {
                     let response = try JSONDecoder().decode(FriendResponse.self, from: data)
-                    DispatchQueue.main.async {
-                        self.friends.value = response.response
-                    }
+                    self.assembleFriends(from: response.response)
                 } catch {
                     print(error.localizedDescription)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    private func filterFriends(from dict: [String: [Friend]]) -> [Friend] {
+        var friends: [Friend] = []
+
+        dict.forEach { _, duplicatedFriends in
+            let sortedFriends = duplicatedFriends.sorted { friend1, friend2 in
+
+                dateFormatter.dateFormat = friend1.updateDate.contains("/") ? "YYYY/MM/dd" : "YYYYMMdd"
+                guard let date1 = dateFormatter.date(from: friend1.updateDate) else {
+                    fatalError("fail to convert friend1 string to date")
+                }
+
+                dateFormatter.dateFormat = friend2.updateDate.contains("/") ? "YYYY/MM/dd" : "YYYYMMdd"
+                guard let date2 = dateFormatter.date(from: friend2.updateDate) else {
+                    fatalError("fail to convert friend2 string to date")
+                }
+
+                return date1 > date2
+            }
+            friends.append(sortedFriends.first!)
+        }
+        return friends
+    }
+
+    private func assembleFriends(from response: [Friend]) {
+        var tempInvitations: [Friend] = []
+        var tempFriends: [Friend] = []
+        let invitingStatus = 2
+
+        response.forEach { friend in
+            if friend.status == invitingStatus {
+                tempInvitations.append(friend)
+            } else {
+                tempFriends.append(friend)
+            }
+        }
+        DispatchQueue.main.async {
+            self.friends.value = tempFriends
+            self.invitations.value = tempInvitations
         }
     }
 }

@@ -26,8 +26,8 @@ class BadgeButton: UIButton {
         NSLayoutConstraint.activate([
             badgeLabel.topAnchor.constraint(equalTo: badgeView.topAnchor),
             badgeLabel.bottomAnchor.constraint(equalTo: badgeView.bottomAnchor),
-            badgeLabel.leadingAnchor.constraint(equalTo: badgeView.leadingAnchor, constant: 4),
-            badgeLabel.trailingAnchor.constraint(equalTo: badgeView.trailingAnchor, constant: -4)
+            badgeLabel.leadingAnchor.constraint(equalTo: badgeView.leadingAnchor, constant: 5),
+            badgeLabel.trailingAnchor.constraint(equalTo: badgeView.trailingAnchor, constant: -5)
         ])
         return badgeView
     }()

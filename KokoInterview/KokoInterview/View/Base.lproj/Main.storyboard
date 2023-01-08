@@ -161,7 +161,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-7g-wyh">
-                                <rect key="frame" x="0.0" y="123" width="390" height="200"/>
+                                <rect key="frame" x="20" y="123" width="350" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="EFt-he-xWy"/>
@@ -276,8 +276,8 @@
                             <constraint firstItem="gzn-go-kmh" firstAttribute="trailing" secondItem="mv7-d9-uJG" secondAttribute="trailing" constant="20" id="TmI-D5-CR4"/>
                             <constraint firstItem="bmG-B8-VWH" firstAttribute="trailing" secondItem="gzn-go-kmh" secondAttribute="trailing" id="UC4-N2-e43"/>
                             <constraint firstItem="tIo-bh-0jC" firstAttribute="leading" secondItem="gzn-go-kmh" secondAttribute="leading" id="YRZ-hd-vx9"/>
-                            <constraint firstItem="Jo4-7g-wyh" firstAttribute="leading" secondItem="gzn-go-kmh" secondAttribute="leading" id="aJx-PI-47X"/>
-                            <constraint firstItem="Jo4-7g-wyh" firstAttribute="trailing" secondItem="gzn-go-kmh" secondAttribute="trailing" id="b9b-2i-08c"/>
+                            <constraint firstItem="Jo4-7g-wyh" firstAttribute="leading" secondItem="gzn-go-kmh" secondAttribute="leading" constant="20" id="aJx-PI-47X"/>
+                            <constraint firstItem="Jo4-7g-wyh" firstAttribute="trailing" secondItem="gzn-go-kmh" secondAttribute="trailing" constant="-20" id="b9b-2i-08c"/>
                             <constraint firstItem="mv7-d9-uJG" firstAttribute="leading" secondItem="gzn-go-kmh" secondAttribute="leading" constant="20" id="fR7-z9-PcM"/>
                             <constraint firstItem="mv7-d9-uJG" firstAttribute="top" secondItem="bmG-B8-VWH" secondAttribute="bottom" id="guv-Vv-knQ"/>
                             <constraint firstItem="gzn-go-kmh" firstAttribute="trailing" secondItem="tIo-bh-0jC" secondAttribute="trailing" id="wN7-vU-EzF"/>

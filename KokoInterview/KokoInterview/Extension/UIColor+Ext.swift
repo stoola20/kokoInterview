@@ -8,15 +8,15 @@
 import UIKit
 
 extension UIColor {
-    static var greynishBrown: UIColor {
+    static var graynishBrown: UIColor {
         return UIColor(red: 71/255, green: 71/255, blue: 71/255, alpha: 1)
     }
 
-    static var brownGrey: UIColor {
+    static var brownGray: UIColor {
         return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
     }
 
-    static var veryLightGrey: UIColor {
+    static var veryLightGray: UIColor {
         return UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
     }
 

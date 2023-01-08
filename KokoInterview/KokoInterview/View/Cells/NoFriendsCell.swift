@@ -22,13 +22,13 @@ class NoFriendsCell: UITableViewCell {
 
     private func setUpUI() {
         topLabel.font = UIFont.boldSystemFont(ofSize: 21)
-        topLabel.textColor = UIColor.greynishBrown
+        topLabel.textColor = UIColor.graynishBrown
         
         middleLabel.font = UIFont.systemFont(ofSize: 14)
-        middleLabel.textColor = UIColor.brownGrey
+        middleLabel.textColor = UIColor.brownGray
         
         bottomLabel.font = UIFont.systemFont(ofSize: 13)
-        bottomLabel.textColor = UIColor.brownGrey
+        bottomLabel.textColor = UIColor.brownGray
         
         settingLabel.font = UIFont.systemFont(ofSize: 13)
         settingLabel.textColor = UIColor.hotPink
@@ -46,7 +46,7 @@ class NoFriendsCell: UITableViewCell {
         addFriendButton.applyshadowWithCorner(
             containerView: buttonContainer,
             cornerRadious: 20,
-            shadowColor: .booger
+            shadowColor: .frogGreen
         )
     }
 }

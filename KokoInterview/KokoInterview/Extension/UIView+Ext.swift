@@ -51,9 +51,9 @@ extension UIView {
     func applyshadowWithCorner(containerView: UIView, cornerRadious: CGFloat, shadowColor: UIColor) {
         containerView.layer.shadowColor = shadowColor.cgColor
         containerView.layer.shadowOpacity = 0.5
-        containerView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        containerView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        containerView.layer.shadowRadius = 5
         containerView.layer.cornerRadius = cornerRadious
-        containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadious).cgPath
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadious
     }

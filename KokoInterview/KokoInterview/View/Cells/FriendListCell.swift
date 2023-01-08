@@ -24,9 +24,9 @@ class FriendListCell: UITableViewCell {
     private func setUpUI() {
         invitedButton.isEnabled = false
         setUp(transferButton, title: "轉帳", with: UIColor.hotPink)
-        setUp(invitedButton, title: "邀請已送出", with: UIColor.veryLightGrey)
+        setUp(invitedButton, title: "邀請已送出", with: UIColor.veryLightGray)
         nameLabel.font = UIFont.systemFont(ofSize: 16)
-        nameLabel.textColor = UIColor.greynishBrown
+        nameLabel.textColor = UIColor.graynishBrown
     }
 
     private func setUp(_ button: UIButton, title: String, with color: UIColor) {
