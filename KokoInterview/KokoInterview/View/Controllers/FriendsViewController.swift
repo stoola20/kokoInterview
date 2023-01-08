@@ -12,6 +12,7 @@ class FriendsViewController: UIViewController {
     let viewModel = FriendViewModel()
     var friends: [Friend] = []
     var invitations: [Friend] = []
+    private var refreshControl = UIRefreshControl()
 
     // MARK: - IBOutlet
     @IBOutlet weak var topContainerView: UIView!
@@ -38,8 +39,7 @@ class FriendsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.getUser()
-        viewModel.getFriends()
+        getData()
     }
 
     // MARK: - Private method
@@ -73,6 +73,7 @@ class FriendsViewController: UIViewController {
             }
             self.invitationHeightConstraint.constant = tableViewHeight
             self.invitationTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 
@@ -161,6 +162,14 @@ class FriendsViewController: UIViewController {
         friendListTableView.registerCellWithNib(identifier: FriendListCell.identifier, bundle: nil)
         friendListTableView.dataSource = self
         friendListTableView.allowsSelection = false
+
+        refreshControl.addTarget(self, action: #selector(getData), for: .valueChanged)
+        friendListTableView.addSubview(refreshControl)
+    }
+
+    @objc private func getData() {
+        viewModel.getUser()
+        viewModel.getFriends()
     }
 
     // MARK: - Action
@@ -208,7 +217,7 @@ extension FriendsViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InvitationCell.identifier, for: indexPath) as? InvitationCell else {
                 fatalError("Could not create FriendListCell")
             }
-            cell.layoutCell(with: friends[indexPath.row])
+            cell.layoutCell(with: invitations[indexPath.row])
             return cell
         }
     }

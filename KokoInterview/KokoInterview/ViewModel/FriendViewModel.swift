@@ -46,8 +46,11 @@ final class FriendViewModel {
         switch DataManager.shared.friendRequest {
         case .friendList(paging: let paging):
             multipleFriendRequest()
+            // 為了取得第二頁清單
             DataManager.shared.friendRequest = .friendList(paging: paging + 1)
             multipleFriendRequest()
+            // 重置回原始狀態
+            DataManager.shared.friendRequest = .friendList(paging: 1)
 
             dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
                 guard let self = self else { return }
