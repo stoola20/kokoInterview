@@ -129,14 +129,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KOKO ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-2W-8gc">
-                                        <rect key="frame" x="30" y="44" width="66" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定 KOKO ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-2W-8gc">
+                                        <rect key="frame" x="30" y="44" width="105" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icInfoBackDeepGray" translatesAutoresizingMaskIntoConstraints="NO" id="6fE-4F-FTP">
-                                        <rect key="frame" x="96" y="45.666666666666671" width="18" height="18"/>
+                                        <rect key="frame" x="135" y="45.666666666666671" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="Myr-gL-e5G"/>
                                             <constraint firstAttribute="width" constant="18" id="RJd-5v-WrE"/>
@@ -145,6 +145,14 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="imgFriendsFemaleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="qts-ab-JEg">
                                         <rect key="frame" x="308" y="7" width="52" height="54"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ2-va-Lmy">
+                                        <rect key="frame" x="168" y="49.666666666666671" width="10" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="5b4-Hu-7Zh"/>
+                                            <constraint firstAttribute="width" constant="10" id="R6s-do-rux"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -152,6 +160,8 @@
                                     <constraint firstItem="bG5-2W-8gc" firstAttribute="leading" secondItem="1ST-xE-0ET" secondAttribute="leading" constant="30" id="IPB-Vj-zhp"/>
                                     <constraint firstAttribute="trailing" secondItem="qts-ab-JEg" secondAttribute="trailing" constant="30" id="PD4-8f-PPx"/>
                                     <constraint firstItem="6fE-4F-FTP" firstAttribute="leading" secondItem="bG5-2W-8gc" secondAttribute="trailing" id="U67-uS-eSs"/>
+                                    <constraint firstItem="QQ2-va-Lmy" firstAttribute="centerY" secondItem="6fE-4F-FTP" secondAttribute="centerY" id="Vkv-z5-OeL"/>
+                                    <constraint firstItem="QQ2-va-Lmy" firstAttribute="leading" secondItem="6fE-4F-FTP" secondAttribute="trailing" constant="15" id="Vre-B6-rlF"/>
                                     <constraint firstItem="qts-ab-JEg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QiP-1s-y9X" secondAttribute="trailing" constant="8" id="XTY-OP-EwN"/>
                                     <constraint firstItem="6fE-4F-FTP" firstAttribute="centerY" secondItem="bG5-2W-8gc" secondAttribute="centerY" id="Ycw-Ez-Glc"/>
                                     <constraint firstItem="bG5-2W-8gc" firstAttribute="top" secondItem="QiP-1s-y9X" secondAttribute="bottom" constant="8" id="ZUX-9a-MHl"/>
@@ -290,6 +300,7 @@
                         <outlet property="invitationHeightConstraint" destination="EFt-he-xWy" id="wJL-G1-pjU"/>
                         <outlet property="invitationTableView" destination="Jo4-7g-wyh" id="njx-oG-u6x"/>
                         <outlet property="nameLabel" destination="QiP-1s-y9X" id="opE-PS-eXK"/>
+                        <outlet property="pinkDot" destination="QQ2-va-Lmy" id="c17-mh-D2R"/>
                         <outlet property="textField" destination="gee-G4-0MO" id="viq-t3-JfO"/>
                         <outlet property="textFieldBackground" destination="C6i-YN-3Km" id="htO-gr-MZ8"/>
                         <outlet property="textFieldBackgroundHeightConstraint" destination="X7Y-yM-ahB" id="odX-qi-bs7"/>
@@ -317,7 +328,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabbarHomeOff" id="eeB-As-vYi">
-                        <inset key="imageInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIm-L1-tSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

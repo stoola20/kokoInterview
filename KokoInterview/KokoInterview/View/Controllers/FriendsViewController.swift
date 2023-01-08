@@ -10,12 +10,23 @@ import UIKit
 class FriendsViewController: UIViewController {
     // MARK: - Property
     let viewModel = FriendViewModel()
+    var user: User?
     var friends: [Friend] = []
-    var invitations: [Friend] = []
+    var filteredFriends: [Friend] = [] {
+        didSet {
+            friendListTableView.reloadData()
+        }
+    }
+    var invitations: [Friend] = [] {
+        didSet {
+            invitationTableView.reloadData()
+        }
+    }
     private var refreshControl = UIRefreshControl()
     private var dynamicY: CGFloat = 0 // y position to animate textfield
 
     // MARK: - IBOutlet
+    @IBOutlet weak var pinkDot: UIView!
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -28,7 +39,12 @@ class FriendsViewController: UIViewController {
     @IBOutlet weak var textFieldBackground: UIView!
     @IBOutlet weak var textFieldBackgroundHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldContainer: UIView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.delegate = self
+            textField.addTarget(self, action: #selector(searchFriends(_:)), for: .editingChanged)
+        }
+    }
     @IBOutlet weak var topContainerTopConstraint: NSLayoutConstraint!
 
     // MARK: - Life Cycle
@@ -53,22 +69,28 @@ class FriendsViewController: UIViewController {
     private func dataBinding() {
         viewModel.user.bind { [weak self] user in
             guard let self = self else { return }
+            self.user = user
             self.nameLabel.text = user.name
-            self.idLabel.text = "KOKO ID : \(user.kokoid)"
         }
 
         viewModel.friends.bind { [weak self] friends in
             guard let self = self else { return }
             self.friends = friends
-            self.friendListTableView.reloadData()
-            self.textFieldContainer.isHidden = friends.isEmpty ? true : false
+            self.filteredFriends = friends
+
             self.textFieldBackgroundHeightConstraint.constant = friends.isEmpty ? 0 : 61
+            self.textFieldContainer.isHidden = friends.isEmpty ? true : false
+
+            self.pinkDot.isHidden = friends.isEmpty ? false : true
+            self.idLabel.text = friends.isEmpty ? "設定 KOKO ID" : "KOKO ID : \(self.user!.kokoid)"
+
             self.friendListTableView.separatorStyle = friends.isEmpty ? .none : .singleLine
             self.friendListTableView.separatorInset = UIEdgeInsets(top: 0, left: 85, bottom: 0, right: 0)
         }
 
         viewModel.invitations.bind { [weak self] invitations in
             guard let self = self else { return }
+            self.refreshControl.endRefreshing()
             self.invitations = invitations
             self.setBadgeValue(invitationValue: invitations.count)
 
@@ -79,12 +101,13 @@ class FriendsViewController: UIViewController {
                 }
             }
             self.invitationHeightConstraint.constant = tableViewHeight
-            self.invitationTableView.reloadData()
-            self.refreshControl.endRefreshing()
         }
     }
 
     private func setUpUI() {
+        pinkDot.layer.cornerRadius = 5
+        pinkDot.backgroundColor = UIColor.hotPink
+
         invitationHeightConstraint.constant = 0
         topContainerView.backgroundColor = UIColor.white252
         underLine.backgroundColor = UIColor.hotPink
@@ -97,8 +120,6 @@ class FriendsViewController: UIViewController {
 
         idLabel.textColor = UIColor.graynishBrown
         idLabel.font = UIFont.systemFont(ofSize: 13)
-
-        textField.delegate = self
     }
 
     private func configButton() {
@@ -196,13 +217,31 @@ class FriendsViewController: UIViewController {
             animations: { self.view.layoutIfNeeded() }
         )
     }
+
+    @objc func searchFriends(_ sender: UITextField) {
+        guard let searchString = sender.text else {
+            return
+        }
+
+        var tempFriends: [Friend] = []
+        if searchString.isEmpty {
+            self.filteredFriends = friends
+        } else {
+            friends.forEach { friend in
+                if friend.name.contains(searchString) {
+                    tempFriends.append(friend)
+                }
+            }
+            self.filteredFriends = tempFriends
+        }
+    }
 }
 
 // MARK: - TableView DataSource
 extension FriendsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == friendListTableView {
-            return friends.isEmpty ? 1 : friends.count
+            return friends.isEmpty ? 1 : filteredFriends.count
         } else {
             return invitations.count
         }
@@ -217,7 +256,7 @@ extension FriendsViewController: UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendListCell.identifier, for: indexPath) as? FriendListCell else {
                     fatalError("Could not create FriendListCell")
                 }
-                cell.layoutCell(with: friends[indexPath.row])
+                cell.layoutCell(with: filteredFriends[indexPath.row])
                 return cell
             }
         } else {

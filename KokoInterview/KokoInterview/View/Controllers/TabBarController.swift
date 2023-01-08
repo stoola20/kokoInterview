@@ -26,6 +26,12 @@ class TabBarController: UITabBarController {
         navigationBarAppearance.shadowColor = nil
         navigationItem.standardAppearance = navigationBarAppearance
         navigationItem.scrollEdgeAppearance = navigationBarAppearance
+
+        tabBar.layer.shadowColor = UIColor.systemGray4.cgColor
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.shadowOffset = CGSize.zero
+        tabBar.layer.shadowRadius = 1.5
+        self.tabBar.backgroundColor = UIColor.white
     }
 
     @objc private func popViewController() {
