@@ -9,21 +9,61 @@
 /* Begin PBXBuildFile section */
 		370F56342967DF930092E594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56332967DF930092E594 /* AppDelegate.swift */; };
 		370F56362967DF930092E594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56352967DF930092E594 /* SceneDelegate.swift */; };
-		370F56382967DF930092E594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56372967DF930092E594 /* ViewController.swift */; };
+		370F56382967DF930092E594 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56372967DF930092E594 /* BaseViewController.swift */; };
 		370F563B2967DF930092E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F56392967DF930092E594 /* Main.storyboard */; };
 		370F563D2967DF940092E594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370F563C2967DF940092E594 /* Assets.xcassets */; };
 		370F56402967DF940092E594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370F563E2967DF940092E594 /* LaunchScreen.storyboard */; };
+		370F56482967EF8E0092E594 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56472967EF8E0092E594 /* TabBarController.swift */; };
+		370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56502967FB530092E594 /* UIImage+Ext.swift */; };
+		370F565329690ADE0092E594 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565229690ADE0092E594 /* UIColor+Ext.swift */; };
+		370F565729690BB80092E594 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565629690BB80092E594 /* FriendsViewController.swift */; };
+		370F565929690F280092E594 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565829690F280092E594 /* User.swift */; };
+		370F565B29690FBC0092E594 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565A29690FBC0092E594 /* Friend.swift */; };
+		370F565E2969116D0092E594 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F565D2969116D0092E594 /* DataManager.swift */; };
+		370F566229691F950092E594 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F566129691F950092E594 /* HTTPClient.swift */; };
+		370F56652969296C0092E594 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56642969296C0092E594 /* FriendViewModel.swift */; };
+		370F5667296929D30092E594 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F5666296929D30092E594 /* Observable.swift */; };
+		370F566F29698E860092E594 /* NoFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F566D29698E860092E594 /* NoFriendsCell.swift */; };
+		370F567029698E860092E594 /* NoFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370F566E29698E860092E594 /* NoFriendsCell.xib */; };
+		370F5674296994830092E594 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F5673296994830092E594 /* UITableView+Ext.swift */; };
+		370F56762969990A0092E594 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56752969990A0092E594 /* UILabel+Ext.swift */; };
+		370F567829699C5B0092E594 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F567729699C5B0092E594 /* UIView+Ext.swift */; };
+		370F567B2969ABBD0092E594 /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F56792969ABBD0092E594 /* FriendListCell.swift */; };
+		370F567C2969ABBD0092E594 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370F567A2969ABBD0092E594 /* FriendListCell.xib */; };
+		370F567E2969C0B80092E594 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F567D2969C0B80092E594 /* BadgeButton.swift */; };
+		370F5681296A7B790092E594 /* InvitationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F567F296A7B790092E594 /* InvitationCell.swift */; };
+		370F5682296A7B790092E594 /* InvitationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370F5680296A7B790092E594 /* InvitationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		370F56302967DF930092E594 /* KokoInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokoInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370F56332967DF930092E594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370F56352967DF930092E594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		370F56372967DF930092E594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370F56372967DF930092E594 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		370F563A2967DF930092E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370F563C2967DF940092E594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370F563F2967DF940092E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370F56412967DF940092E594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370F56472967EF8E0092E594 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		370F56502967FB530092E594 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		370F565229690ADE0092E594 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		370F565629690BB80092E594 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		370F565829690F280092E594 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		370F565A29690FBC0092E594 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		370F565D2969116D0092E594 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		370F566129691F950092E594 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		370F56642969296C0092E594 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		370F5666296929D30092E594 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		370F566D29698E860092E594 /* NoFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFriendsCell.swift; sourceTree = "<group>"; };
+		370F566E29698E860092E594 /* NoFriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoFriendsCell.xib; sourceTree = "<group>"; };
+		370F5673296994830092E594 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		370F56752969990A0092E594 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		370F567729699C5B0092E594 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		370F56792969ABBD0092E594 /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		370F567A2969ABBD0092E594 /* FriendListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
+		370F567D2969C0B80092E594 /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
+		370F567F296A7B790092E594 /* InvitationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationCell.swift; sourceTree = "<group>"; };
+		370F5680296A7B790092E594 /* InvitationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +96,83 @@
 		370F56322967DF930092E594 /* KokoInterview */ = {
 			isa = PBXGroup;
 			children = (
+				370F564F2967FB290092E594 /* Extension */,
+				370F565C296910450092E594 /* Model */,
+				370F564D2967FB100092E594 /* View */,
+				370F56632969294C0092E594 /* ViewModel */,
 				370F56332967DF930092E594 /* AppDelegate.swift */,
 				370F56352967DF930092E594 /* SceneDelegate.swift */,
-				370F56372967DF930092E594 /* ViewController.swift */,
-				370F56392967DF930092E594 /* Main.storyboard */,
 				370F563C2967DF940092E594 /* Assets.xcassets */,
-				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
 				370F56412967DF940092E594 /* Info.plist */,
 			);
 			path = KokoInterview;
+			sourceTree = "<group>";
+		};
+		370F564D2967FB100092E594 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				370F567D2969C0B80092E594 /* BadgeButton.swift */,
+				370F566A29698D3F0092E594 /* Cells */,
+				370F563E2967DF940092E594 /* LaunchScreen.storyboard */,
+				370F56392967DF930092E594 /* Main.storyboard */,
+				370F565429690B9B0092E594 /* Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		370F564F2967FB290092E594 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				370F56502967FB530092E594 /* UIImage+Ext.swift */,
+				370F565229690ADE0092E594 /* UIColor+Ext.swift */,
+				370F5673296994830092E594 /* UITableView+Ext.swift */,
+				370F56752969990A0092E594 /* UILabel+Ext.swift */,
+				370F567729699C5B0092E594 /* UIView+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		370F565429690B9B0092E594 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				370F56372967DF930092E594 /* BaseViewController.swift */,
+				370F56472967EF8E0092E594 /* TabBarController.swift */,
+				370F565629690BB80092E594 /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		370F565C296910450092E594 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				370F565829690F280092E594 /* User.swift */,
+				370F565A29690FBC0092E594 /* Friend.swift */,
+				370F565D2969116D0092E594 /* DataManager.swift */,
+				370F566129691F950092E594 /* HTTPClient.swift */,
+				370F5666296929D30092E594 /* Observable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		370F56632969294C0092E594 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				370F56642969296C0092E594 /* FriendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		370F566A29698D3F0092E594 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				370F566D29698E860092E594 /* NoFriendsCell.swift */,
+				370F566E29698E860092E594 /* NoFriendsCell.xib */,
+				370F56792969ABBD0092E594 /* FriendListCell.swift */,
+				370F567A2969ABBD0092E594 /* FriendListCell.xib */,
+				370F567F296A7B790092E594 /* InvitationCell.swift */,
+				370F5680296A7B790092E594 /* InvitationCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				370F56402967DF940092E594 /* LaunchScreen.storyboard in Resources */,
+				370F567C2969ABBD0092E594 /* FriendListCell.xib in Resources */,
 				370F563D2967DF940092E594 /* Assets.xcassets in Resources */,
+				370F567029698E860092E594 /* NoFriendsCell.xib in Resources */,
+				370F5682296A7B790092E594 /* InvitationCell.xib in Resources */,
 				370F563B2967DF930092E594 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +249,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370F56382967DF930092E594 /* ViewController.swift in Sources */,
+				370F567829699C5B0092E594 /* UIView+Ext.swift in Sources */,
+				370F567B2969ABBD0092E594 /* FriendListCell.swift in Sources */,
+				370F5674296994830092E594 /* UITableView+Ext.swift in Sources */,
+				370F5667296929D30092E594 /* Observable.swift in Sources */,
+				370F56482967EF8E0092E594 /* TabBarController.swift in Sources */,
+				370F566229691F950092E594 /* HTTPClient.swift in Sources */,
+				370F565E2969116D0092E594 /* DataManager.swift in Sources */,
+				370F56382967DF930092E594 /* BaseViewController.swift in Sources */,
+				370F567E2969C0B80092E594 /* BadgeButton.swift in Sources */,
+				370F56512967FB530092E594 /* UIImage+Ext.swift in Sources */,
+				370F566F29698E860092E594 /* NoFriendsCell.swift in Sources */,
+				370F565329690ADE0092E594 /* UIColor+Ext.swift in Sources */,
+				370F565929690F280092E594 /* User.swift in Sources */,
+				370F565729690BB80092E594 /* FriendsViewController.swift in Sources */,
+				370F56652969296C0092E594 /* FriendViewModel.swift in Sources */,
+				370F56762969990A0092E594 /* UILabel+Ext.swift in Sources */,
+				370F5681296A7B790092E594 /* InvitationCell.swift in Sources */,
+				370F565B29690FBC0092E594 /* Friend.swift in Sources */,
 				370F56342967DF930092E594 /* AppDelegate.swift in Sources */,
 				370F56362967DF930092E594 /* SceneDelegate.swift in Sources */,
 			);
