@@ -67,14 +67,12 @@ class FriendsViewController: UIViewController {
 
     // MARK: - Private method
     private func dataBinding() {
-        viewModel.user.bind { [weak self] user in
-            guard let self = self else { return }
+        viewModel.user.bind { [unowned self] user in
             self.user = user
             self.nameLabel.text = user.name
         }
 
-        viewModel.friends.bind { [weak self] friends in
-            guard let self = self else { return }
+        viewModel.friends.bind { [unowned self] friends in
             self.friends = friends
             self.filteredFriends = friends
 
@@ -88,8 +86,7 @@ class FriendsViewController: UIViewController {
             self.friendListTableView.separatorInset = UIEdgeInsets(top: 0, left: 85, bottom: 0, right: 0)
         }
 
-        viewModel.invitations.bind { [weak self] invitations in
-            guard let self = self else { return }
+        viewModel.invitations.bind { [unowned self] invitations in
             self.refreshControl.endRefreshing()
             self.invitations = invitations
             self.setBadgeValue(invitationValue: invitations.count)
