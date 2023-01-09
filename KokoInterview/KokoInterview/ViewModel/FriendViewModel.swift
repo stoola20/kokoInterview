@@ -52,8 +52,7 @@ final class FriendViewModel {
             // 重置回原始狀態
             DataManager.shared.friendRequest = .friendList(paging: 1)
 
-            dispatchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
-                guard let self = self else { return }
+            dispatchGroup.notify(queue: DispatchQueue.global()) { [unowned self] in
                 self.assembleFriends(from: self.filterFriends(from: self.friendDict))
             }
         default:
