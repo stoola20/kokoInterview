@@ -4,6 +4,3 @@
 
 # file options
 --exclude Pods
-
-# header
---header "{file}\nCopyright (c) {year} AppWorks School\nCreated by Hsun on {created}."
